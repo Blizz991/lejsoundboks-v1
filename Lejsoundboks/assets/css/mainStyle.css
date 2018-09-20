@@ -1,0 +1,194 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 4.5rem;
+    background-color: #28344b;
+    color: #fff;
+    white-space: wrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+}
+
+.btn {
+    /* -webkit-clip-path: polygon(75% 0, 100% 95%, 95% 100%, 40% 100%, 0 50%, 50% 0); */
+    clip-path: polygon(89% 0, 100% 46%, 88% 100%, 12% 100%, 0 48%, 10% 2%);
+}
+
+.btn-primary {
+    background-color: #e6dbbe;
+    border-color: #e6dbbe;
+}
+
+.btn-primary:hover {
+    background-color: burlywood;
+    border-color: burlywood;
+}
+
+.nav-transparent {
+    background-color: rgba(33, 33, 33, 0.5);
+}
+
+/* CSS for placing text on top of images */
+
+/* Container holding the image and the text */
+
+.position-container {
+    position: relative;
+    text-align: center;
+}
+
+/* Bottom left text */
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-center{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    color: #fff !important;
+    transition: transform .2s;
+    /* Animation */
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color:#3a484e !important;
+    background-color:#e6dbbe;
+}
+
+a:hover {
+    color: #d3d3d3 !important;
+    transform: scale(1.05);
+}
+
+/* .nav-transparent > .navbar-toggler{
+    color:#000;
+    border-color: rgba(230, 199, 199, 0.2)
+  } */
+
+a.active {
+    text-decoration: underline;
+}
+
+.box-bg-1 {
+    background-color: #697a76;
+}
+
+.box-bg-2 {
+    background-color: #3a484e;
+}
+
+.box-bg-3 {
+    background-color: #28344b;
+}
+
+.box-bg-4 {
+    background-color: #e6dbbe;
+}
+
+.box-bg-white {
+    background-color: #fff;
+    color:#28344b !important;
+}
+
+.fas{
+    min-width:40px;
+    text-align: center;
+}
+
+#featuredProduct ul>li{
+    font-size:2rem;
+}
+
+.productFeaturesList ul>li{
+    font-size:2rem;
+}
+
+#trustPilotMainContainer{
+    min-height:200px;
+}
+
+.overlay-effect {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: .5s ease;
+    background-color: rgba(230,219,190, 0.7);
+    overflow:hidden;
+  }
+
+.contactBox{
+    min-height:400px;
+}
+
+    .contactBox p{
+        font-size:1.5rem;
+    }
+
+#faqAccordion .card-header{
+    cursor:pointer;
+}
+
+[data-toggle="collapse"] i:before{
+    content: "\f146";
+}
+
+[data-toggle="collapse"].collapsed i:before{
+    content: "\f0fe";
+}
+
+.box-shadow{
+    /* box-shadow:#3d3d3d 2px 2px 2px 2px; */
+    background-color:rgba(33, 33, 33, 0.5);
+    padding:5px;
+}

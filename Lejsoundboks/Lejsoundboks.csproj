@@ -68,12 +68,76 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\mainStyle.css" />
+    <Content Include="assets\images\campfire-984020.jpg" />
+    <Content Include="assets\images\campfire.jpg" />
+    <Content Include="assets\images\concert-768722.jpg" />
+    <Content Include="assets\images\concert.jpg" />
+    <Content Include="assets\images\forside-img.jpg" />
+    <Content Include="assets\images\Jaxstick.png" />
+    <Content Include="assets\images\Laust.png" />
+    <Content Include="assets\images\LilleSoundboks2.png" />
+    <Content Include="assets\images\logo-large.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\new-year.jpg" />
+    <Content Include="assets\images\pakkelosning.png" />
+    <Content Include="assets\images\Proboks.png" />
+    <Content Include="assets\images\Soundboks2transparrent.png" />
+    <Content Include="assets\images\step-by-step.jpg" />
+    <Content Include="Default.aspx" />
+    <Content Include="Handelsbetingelser.aspx" />
+    <Content Include="Kontakt.aspx" />
+    <Content Include="Omos.aspx" />
+    <Content Include="Produkter.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handelsbetingelser.aspx.cs">
+      <DependentUpon>Handelsbetingelser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handelsbetingelser.aspx.designer.cs">
+      <DependentUpon>Handelsbetingelser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontakt.aspx.cs">
+      <DependentUpon>Kontakt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontakt.aspx.designer.cs">
+      <DependentUpon>Kontakt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster.Master.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster.Master.designer.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Omos.aspx.cs">
+      <DependentUpon>Omos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Omos.aspx.designer.cs">
+      <DependentUpon>Omos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Produkter.aspx.cs">
+      <DependentUpon>Produkter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Produkter.aspx.designer.cs">
+      <DependentUpon>Produkter.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MainMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

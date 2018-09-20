@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="Lejsoundboks.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lejsoundboks</title>
+    <!-- Load Fonts from google -->
+    <link href="https://fonts.googleapis.com/css?family=Muli|Roboto" rel="stylesheet">
+    <!-- Load CSS for Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <!-- Load our own stylesheet AFTER Bootstrap to allow us to override -->
+    <link rel="stylesheet" href="assets/css/mainStyle.css">
+    <!-- Load Fontawesome so we have access to all the amazing icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="container-fluid no-gutters p-0">
+    <form id="form1" runat="server">
+        <!-- Check https://www.codeply.com/go/yJGeOulqIQ/bootstrap-4-navbar-center-links-examples to center nav links -->
+        <!-- #region Bootstrap 4 template -->
+        <nav class="navbar navbar-expand-lg navbar-dark nav-transparent fixed-top">
+            <div class="container">
+                <a class="navbar-brand box-shadow rounded" href="Default.aspx">
+                    <img class="img-fluid mr-2" src="assets/images/logo.png" alt="Logo">
+                    Lej Soundboks</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="modal" data-target="#faqModal" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Kontakt.aspx">Kontakt</a>
+                        </li>
+                        <%--<li class="nav-item">
+                            <a class="nav-link" href="Omos.aspx">Om os</a>
+                        </li>--%>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Produkter.aspx">Produkter</a>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-md-0 mr-2">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-search"></i></div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Søg">
+                        </div>
+                        <button class="btn btn-success ml-1">Søg</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- FAQ Modal (popup) -->
+        <div id="faqModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                        <h5 class="modal-title">FAQ - Ofte stillede spørgsmål</h5>
+                        <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body bg-dark">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="card bg-dark text-white">
+                                <div class="card-header" id="headingOne">
+                                    <h5 data-toggle="collapse" data-target="#collapseOne" class="mb-0">Spørgsmål 1 <i class="fa"></i>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo">Spørgsmål 2 <i class="fa"></i>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white">
+                                <div class="card-header" id="headingThree">
+                                    <h5 data-toggle="collapse" data-target="#collapseThree" class="mb-0 collapsed">Spørgsmål 3 <i class="fa"></i>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="pt-4">Kunne du ikke finde svaret på dit spørgsmål?</h5>
+                        <span>Kontakt os</span><a class="btn btn-sm btn-success ml-2" href="Kontakt.aspx"> her!</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Luk</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main role="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+        <footer class="blog-footer text-center mb-2">
+            <div class="w-100">
+                <div class="justify-content-center d-flex flex-md-row flex-column bd-highlight">
+                    <a href="Kontakt.aspx" class="p-2 bd-highlight">Kontakt</a>
+                    <a href="Handelsbetingelser.aspx" class="p-2 bd-highlight">Handelsbetingelser</a>
+                    <div class="p-2 bd-highlight">2018 &copy; Lejsoundboks.dk</div>
+                    <a href="#" class="p-2 bd-highlight" data-toggle="modal" data-target="#faqModal">Spørgsmål? (FAQ)</a>
+                </div>
+                <a target="_blank" href="https://facebook.com"><i class="fab fa-6x fa-facebook facebook-bg"></i></a>
+            </div>
+        </footer>
+    </form>
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- The order of the scripts below is very important, if you change the order, some functionality will NOT work -->
+    <!-- Load slim version of Jquery - required for Bootstrap to work -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Load Popper.js - required for dropdowns, tooltips, popovers and more. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Load Bootstrap Javascript - enables all the amazing functionality like Accordions, Modals and many more -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+</body>
+</html>

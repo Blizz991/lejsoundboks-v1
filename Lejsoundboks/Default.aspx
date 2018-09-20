@@ -4,14 +4,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <img class="img-fluid" src="assets/images/forside-img.jpg" alt="Main image">
-    <img class="img-fluid" src="assets/images/step-by-step.jpg" alt="Step by step guide">
-    <div class="container-fluid box-bg-1">
+    <img class="img-fluid" src="assets/images/step-by-step-guide.png" alt="Step by step guide">
+    <div id="firstContent" class="container-fluid box-bg-1">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12">
-                    <img class="img-fluid p-3" src="assets/images/Soundboks2transparrent.png" />
+                <div class="col-md-6 col-12 text-center">
+                    <img class="img-fluid px-3 py-4" style="max-height: 510px;" src="assets/images/Soundboks2transparrent.png" />
                 </div>
-                <div class="col-md-6 col-12 p-5">
+                <div class="col-md-6 col-12 pr-5 py-4">
                     <div class="ml-5">
                         <h3>Soundboks 2</h3>
                         <p>
@@ -43,8 +43,9 @@
         </div>
     </div>
     <div id="trustPilotMainContainer" class="container-fluid box-bg-2">
-        <div class="container">
-            <iframe class="p-5" style="position: relative; height: 150px; width: 100%; border-style: none; display: block; overflow: hidden;" scrolling="no" title="Customer reviews powered by Trustpilot" src="http://widget.trustpilot.com/trustboxes/5419b6a8b0d04a076446a9ad/index.html?templateId=5419b6a8b0d04a076446a9ad&amp;businessunitId=5960b1130000ff0005a636ab#locale=da-DK&amp;styleHeight=20px&amp;styleWidth=100%25&amp;theme=light" frameborder="0"></iframe>
+        <div class="container text-center">
+            <img class="img-fluid pt-5" src="assets/images/trustpilot.png" />
+            <iframe class="p-5" style="width: 100%; border-style: none; display: block; overflow: hidden;" scrolling="no" title="Customer reviews powered by Trustpilot" src="http://widget.trustpilot.com/trustboxes/5419b6a8b0d04a076446a9ad/index.html?templateId=5419b6a8b0d04a076446a9ad&amp;businessunitId=5960b1130000ff0005a636ab#locale=da-DK&amp;styleHeight=20px&amp;styleWidth=100%25&amp;theme=light" frameborder="0"></iframe>
         </div>
     </div>
 </asp:Content>

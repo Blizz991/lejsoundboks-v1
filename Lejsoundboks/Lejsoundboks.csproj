@@ -76,17 +76,22 @@
     <Content Include="assets\images\forside-img.jpg" />
     <Content Include="assets\images\Jaxstick.png" />
     <Content Include="assets\images\Laust.png" />
+    <Content Include="assets\images\lejsoundboks.jpg" />
     <Content Include="assets\images\LilleSoundboks2.png" />
     <Content Include="assets\images\logo-large.png" />
     <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\LS-logo.png" />
     <Content Include="assets\images\new-year.jpg" />
     <Content Include="assets\images\pakkelosning.png" />
     <Content Include="assets\images\Proboks.png" />
+    <Content Include="assets\images\produkter-head.jpg" />
     <Content Include="assets\images\Soundboks2transparrent.png" />
-    <Content Include="assets\images\step-by-step.jpg" />
+    <Content Include="assets\images\step-by-step-guide.png" />
+    <Content Include="assets\images\trustpilot.png" />
     <Content Include="Default.aspx" />
     <Content Include="Handelsbetingelser.aspx" />
     <Content Include="Kontakt.aspx" />
+    <Content Include="Lej.aspx" />
     <Content Include="Omos.aspx" />
     <Content Include="Produkter.aspx" />
     <Content Include="Web.config" />
@@ -112,6 +117,13 @@
     </Compile>
     <Compile Include="Kontakt.aspx.designer.cs">
       <DependentUpon>Kontakt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lej.aspx.cs">
+      <DependentUpon>Lej.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lej.aspx.designer.cs">
+      <DependentUpon>Lej.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainMaster.Master.cs">
       <DependentUpon>MainMaster.Master</DependentUpon>

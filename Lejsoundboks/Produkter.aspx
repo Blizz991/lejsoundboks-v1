@@ -4,10 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid p-0">
-        <div class="position-relative">
-            <img class="img-fluid" src="assets/images/concert.jpg" alt="Mood image">
-            <div class="overlay-effect"></div>
-        </div>
+        <%--<div class="position-relative">--%>
+            <img class="img-fluid" src="assets/images/produkter-head.jpg" alt="Mood image">
+            <%--<div class="overlay-effect"></div>--%>
+        <%--</div>--%>
     </div>
     <div class="container-fluid box-bg-2">
         <div class="container">
@@ -15,6 +15,7 @@
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Soundboks 2</a>
                     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Soundboks 1</a>
+                    <a class="nav-item nav-link" id="nav-proboks-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Proboks</a>
                 </div>
             </nav>
             <div class="tab-content p-3" id="nav-tabContent">
@@ -28,6 +29,12 @@
                             <div class="ml-2">
                                 <div class="row">
                                     <div class="col-12">
+                                        <style>
+                                                tbody>tr>th{
+                                                    color:#e6dbbe !important;
+                                                    font-size:1.2rem;
+                                                }
+                                            </style>
                                         <table class="table">
                                             <%--<thead class="thead-dark">
                                                 <tr>
@@ -37,27 +44,28 @@
                                                     <th scope="col"></th>
                                                 </tr>
                                             </thead>--%>
+                                            
                                             <tbody>
                                                 <tr>
                                                     <th scope="row">Festen</th>
                                                     <td>1 Døgn</td>
-                                                    <td>545 ,-</td>
+                                                    <td class="font-weight-bold">545 ,-</td>
                                                     <td>
-                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" runat="server" /></td>
+                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" PostBackUrl="~/Lej.aspx" runat="server" /></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Weekend</th>
                                                     <td>3 Døgn</td>
                                                     <td>1997 ,-</td>
                                                     <td>
-                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" runat="server" /></td>
+                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" PostBackUrl="~/Lej.aspx" runat="server" /></td>
                                                 </tr>
                                                 <tr class="border-bottom">
                                                     <th scope="row">Festival</th>
                                                     <td>7 Døgn</td>
                                                     <td>1997 ,-</td>
                                                     <td>
-                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" runat="server" /></td>
+                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" PostBackUrl="~/Lej.aspx" runat="server" /></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -81,21 +89,27 @@
                                                 <li class="mb-2">
                                                     <i class="fas mr-2 fa-2x fa-weight-hanging"></i>Vejer kun 15 kilo
                                                 </li>
+                                                <li class="mb-2">
+                                                    <i class="fas mr-2 fa-2x fa-leaf"></i>Velegnet både inde og ude
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <ul class="list-unstyled productFeaturesList">
                                                 <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-battery-full"></i>40 timers batteri
+                                                    <i class="fas mr-2 fa-2x fa-rocket"></i>Automatisk boost mode
                                                 </li>
                                                 <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-volume-up"></i>122 decibel
+                                                    <i class="fas mr-2 fa-2x fa-shield-alt"></i>Stødtæt beskyttelse
                                                 </li>
                                                 <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-tint"></i>Tåler alt vejr
+                                                    <i class="fas mr-2 fa-2x fa-charging-station"></i>Opladning på 3.5 time
                                                 </li>
                                                 <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-weight-hanging"></i>Vejer kun 15 kilo
+                                                    <i class="fab mr-4 fa-2x fa-bluetooth"></i>Bluetooth og AUX
+                                                </li>
+                                                <li class="mb-2">
+                                                    <i class="fas mr-2 fa-2x fa-toggle-on"></i>Inde/ude knap
                                                 </li>
                                             </ul>
                                         </div>
@@ -152,68 +166,36 @@ Fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio
                                                 <tr>
                                                     <th scope="row">Festen</th>
                                                     <td>1 Døgn</td>
-                                                    <td>545 ,-</td>
+                                                    <td>499 ,-</td>
                                                     <td>
-                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" runat="server" /></td>
+                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" PostBackUrl="~/Lej.aspx" runat="server" /></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Weekend</th>
                                                     <td>3 Døgn</td>
-                                                    <td>1997 ,-</td>
+                                                    <td>799 ,-</td>
                                                     <td>
-                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" runat="server" /></td>
+                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" PostBackUrl="~/Lej.aspx" runat="server" /></td>
                                                 </tr>
                                                 <tr class="border-bottom">
                                                     <th scope="row">Festival</th>
                                                     <td>7 Døgn</td>
-                                                    <td>1997 ,-</td>
+                                                    <td>1499 ,-</td>
                                                     <td>
-                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" runat="server" /></td>
+                                                        <asp:Button CssClass="btn btn-primary text-dark font-weight-bold" Text="Lej nu" PostBackUrl="~/Lej.aspx" runat="server" /></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
-                            <%--<div class="row">
+                            <div class="row">
                                 <div class="col-12 px-4">
                                     <div class="row">
-                                        <div class="col-md-6 col-12">
-                                            <ul class="list-unstyled productFeaturesList">
-                                                <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-battery-full"></i>40 timers batteri
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-volume-up"></i>122 decibel
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-tint"></i>Tåler alt vejr
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-weight-hanging"></i>Vejer kun 15 kilo
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6 col-12">
-                                            <ul class="list-unstyled productFeaturesList">
-                                                <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-battery-full"></i>40 timers batteri
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-volume-up"></i>122 decibel
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-tint"></i>Tåler alt vejr
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas mr-2 fa-2x fa-weight-hanging"></i>Vejer kun 15 kilo
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        
                                     </div>
-
                                 </div>
-                            </div>--%>
+                            </div>
                             <div class="row">
                                 <div class="col-12 px-5 pt-2">
                                     <p>
@@ -229,6 +211,5 @@ Fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </asp:Content>

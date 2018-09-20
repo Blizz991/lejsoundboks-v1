@@ -26,7 +26,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark nav-transparent fixed-top">
             <div class="container">
                 <a class="navbar-brand box-shadow rounded" href="Default.aspx">
-                    <img class="img-fluid mr-2" src="assets/images/logo.png" alt="Logo">
+                    <img class="img-fluid" src="assets/images/LS-logo.png" alt="Logo">
                     Lej Soundboks</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -35,26 +35,29 @@
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="modal" data-target="#faqModal" href="#">FAQ</a>
+                            <a class="nav-link" href="Produkter.aspx">Produkter</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Kontakt.aspx">Kontakt</a>
                         </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link btn btn-sm btn-info font-weight-bold py-1 mt-1" data-toggle="modal" data-target="#faqModal" href="#">FAQ</a>
+                        </li>
+
                         <%--<li class="nav-item">
                             <a class="nav-link" href="Omos.aspx">Om os</a>
                         </li>--%>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Produkter.aspx">Produkter</a>
-                        </li>
                     </ul>
                     <div class="form-inline my-2 my-md-0 mr-2">
                         <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fas fa-search"></i></div>
-                            </div>
+
                             <input type="text" class="form-control" placeholder="Søg">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+
                         </div>
-                        <button class="btn btn-success ml-1">Søg</button>
+                        <%--<button class="btn btn-success ml-1">Søg</button>--%>
                     </div>
                 </div>
             </div>
@@ -154,9 +157,36 @@
     <!-- The order of the scripts below is very important, if you change the order, some functionality will NOT work -->
     <!-- Load slim version of Jquery - required for Bootstrap to work -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        var activeLink = (function () {
+            'use strict';
+            function findCurrentLink(selector, classname) {
+                var links = document.querySelectorAll(selector),
+                    //currentUrl = window.location.href;
+                    //Small fix to allow parameters in the URL.
+                    currentUrl = window.location.href.split('?')[0];
+                classname = classname || 'active';
+                for (var i = 0; i < links.length; i++) {
+                    if (links[i].tagName === 'A') {
+                        if (links[i].href === currentUrl) {
+                            links[i].parentNode.classList.add(classname);
+                        }
+                    }
+                }
+            }
+            return function (selector, classname) { return findCurrentLink(selector, classname) };
+        }(window, undefined));
+
+        activeLink('.navbar-nav a', 'active');
+
+    </script>
     <!-- Load Popper.js - required for dropdowns, tooltips, popovers and more. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <!-- Load Bootstrap Javascript - enables all the amazing functionality like Accordions, Modals and many more -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server"></asp:ContentPlaceHolder>
 </body>
 </html>
